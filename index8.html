@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>函数类型的变量</title>
+	</head>
+	<body>
+		<h1>函数类型的变量</h1>
+		<script>
+			//定义一个函数
+			function test(){
+				document.write("<br>定义一个函数test");
+			}
+			test();
+			//定义一个变量
+			var tt = function(){
+				document.write("<br>定义一个变量tt");
+			};
+			tt();
+			
+			var kk = test;
+			kk();
+			document.write("<br>kk类型="+ typeof(kk));
+		</script>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>函数的作用范围</title>
+	</head>
+	<body>
+		<script>
+			var test = 10;//全局变量，在function函数外面定义的变量
+			function ok(){
+				var test;//在一个函数内部定义的变量是局部变量
+				//局部变量在该函数调用完成以后会自动消失
+				test = 5;
+				document.write("局部变量test="+test);
+			}
+			ok();
+			document.write("<br>全局变量test="+test);
+		</script>
+	</body>
+</html>

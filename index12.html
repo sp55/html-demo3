@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>分析对象的属性和方法</title>
+	</head>
+	<body>
+		<h1>分析对象的属性和方法</h1>
+		<script>
+			//分析数学对象
+			var pro = "";
+			//document.bgColor = "red";
+			for (pro in document	) {
+				document.write("document."+pro+"="+document[pro]+"<br>");
+			}
+			
+			document.write("\n\n\n\n\n<br>**************分割***************<br>");
+			//分析自定义对象
+			var npc1 = new function(){
+				this.act = 100;
+				this.hp = 99;
+				this.fire=function(){
+				document.write("<br>"+this.name+"正在开火");
+			}
+			}
+			for (pro in npc1	) {
+				document.write("npc1."+pro+"="+npc1[pro]+"<br>");
+			}
+			
+		</script>
+	</body>
+</html>

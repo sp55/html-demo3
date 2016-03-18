@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>字符串的切割</title>
+	</head>
+	<body>
+		<h1>字符串的切割</h1>
+		<script>
+			var menu = "Hello|World|HaHa";
+			var mt = menu.split('|');//相当于mt = ["Hello","World","HaHa"]
+			for(var n =0;n<mt.length;n++){
+				document.write("<br>"+mt[n]);
+			}
+			
+			var mm = [" J "," o ","  i","n  "];
+			var str = mm.join("@");
+			document.write("<br>str="+ str);
+			
+		</script>
+	</body>
+</html>

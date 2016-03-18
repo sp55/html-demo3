@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>对创建的对象进行封装</title>
+	</head>
+	<body>
+		<h1>对创建的对象进行封装</h1>
+		<script>
+			function createNPC(){
+			var p = new Object();
+			p.hp = 100;
+			p.act = 99;
+			p.money = 888;
+			p.fire=function(){
+				document.write("正在开火");
+			}
+			return p;
+			}
+			var p1 = createNPC();
+			var p2 = createNPC();
+			alert(p1.hp);
+			document.write("<br>p1对象的hp="+p1.hp);
+			alert(p2.money);
+			document.write("<br> p2对象的money="+p2.money);
+			
+			//通过函数将对象的初始化进行封装
+			function newNPC(n,h,a,m){
+			this.act = a;
+			this.hp = h;
+			this.money = m;
+			this.name = n;
+			this.fire=function(){
+				document.write("<br>"+this.name+"正在开火");
+			}
+			}
+			var p3 =new newNPC('张三',100,99,888);
+			var p4 =new newNPC('李四',150,150,999);
+			p3.fire();
+			p4.fire();
+				
+				
+		</script>
+	</body>
+</html>

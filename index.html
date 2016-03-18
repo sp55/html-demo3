@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>日期和对象的使用</title>
+</head>
+<body>
+	<script>
+		var now = new Date();
+		document.write(now);
+		//输出年月日
+		var year = now.getYear();
+		var month = now.getMonth()+1;
+		var day = now.getDay();
+		alert(year);
+		alert(month);
+		alert(day);
+		document.write(year+"-"+month+"-"+day);
+	</script>
+</body>
+</html>

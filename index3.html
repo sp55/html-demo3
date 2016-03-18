@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>扩展数组的成员函数</title>
+	</head>
+	<body>
+		<h1>扩展数组的成员函数</h1>
+		<script>
+			var menu = ["凉菜","热菜","主食"];
+			menu.push("酒水");
+//			for (var n=0;n<menu.length;n++) {
+//				document.write(menu[n]+"<br>");
+//			}
+			//定义一个函数输出一个数组的所有元素
+			function print(){
+				for (var i = 0; i < this.length; i++) {
+					document.write(this[i]+"<br>");
+				}
+			}
+			Array.prototype.show = print;//为数组添加新的函数
+			menu.show();//输出所有元素
+		</script>
+	</body>
+</html>

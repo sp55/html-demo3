@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>字符串的基本处理</title>
+	</head>
+	<body>
+		<h1>字符串处理</h1>
+		<script>
+			var name = "mytestjs";//定义一个字符串
+			document.write("字符串的长度 = "+name.length);
+			for(var n =0;n<name.length;n++){
+				document.write("<br>"+name.charAt(n));
+			}//打印字符串的所有的元素
+			name = "张三";
+			document.write("<br>"+name.substr(0,1));
+			var birthday = "20080809";//YYYYMMDD
+			//获取这个字符串的年月日
+			var year = birthday.substr(0,4);
+			var month = birthday.substr(4,2);
+			//从6到结束，位数可以不写
+			var day = parseInt( birthday.substr(6));//转成整型
+			document.write("<br>年="+year);
+			document.write("<br>月="+month);
+			document.write("<br>日="+day);
+			
+			//转成大小写
+			name = "Kevin Garnett";
+			document.write("<br>"+name);
+			name = name.toUpperCase();//转化成大写
+			document.write("<br>转化成大写后"+name);
+			name = name.toLowerCase();//转化成小写
+			document.write("<br>转化成小写后"+name);
+			
+		</script>
+	</body>
+</html>
